@@ -1,5 +1,5 @@
 import MaxwidthWraper from "@/components/MaxwidthWraper";
-import { ArrowRight, Check, Icon, Star } from "lucide-react";
+import { ArrowRight, Check,  Star } from "lucide-react";
 import { Icons } from "@/components/icons";
 import { Reviews } from "@/components/reviews";
 import Phone from "@/components/phone";
