@@ -106,7 +106,7 @@ function Review({ imgSrc, className, ...Props }: reviewProps) {
     <div
       className={cn(
         "animate-fade-in rounded-[2.25rem] bg-white p-6 opacity-0 shadow-xl shadow-slate-900/5",
-        className
+        className,
       )}
       style={{ animationDelay }}
       {...Props}
@@ -173,7 +173,7 @@ export function Reviews() {
       <img
         aria-hidden="true"
         src="/what-people-are-buying.png"
-        className="absolute select-none hidden xl:block -left-32 top-1/3"
+        className="absolute -left-32 top-1/3 hidden select-none xl:block"
       />
 
       <ReviewGrid />

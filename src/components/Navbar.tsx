@@ -5,14 +5,14 @@ import { ArrowRight } from "lucide-react";
 
 const Navbar = function () {
   return (
-    <nav className="w-full sticky inset-x-0 top-0  p-4 shadow shadow-muted/80 border-gray-200 bg-white/75 backdrop-blur-lg transition-all z-[100]">
+    <nav className="sticky inset-x-0 top-0 z-[100] w-full border-gray-200 bg-white/75 p-4 shadow shadow-muted/80 backdrop-blur-lg transition-all">
       <div className="flex items-center justify-between px-2.5 md:px-20">
         <Link href={"/login"}>
           case
           <span className="text-primary">cobra</span>
         </Link>
 
-        <div className="flex items-center justify-center h-full gap-x-8">
+        <div className="flex h-full items-center justify-center gap-x-8">
           <ModeToggle />
           <Link
             href={""}
@@ -24,11 +24,11 @@ const Navbar = function () {
             Login
           </Link>
 
-          <div className="h-8 w-px bg-zinc-200 hidden sm:block"></div>
-          <Button className="bg-primary hidden md:block">
+          <div className="hidden h-8 w-px bg-zinc-200 sm:block"></div>
+          <Button className="hidden bg-primary md:block">
             <Link href={"/configure/upload"} className="text-xs text-white">
               Create case
-              <ArrowRight className="inline-block ml-1 w-2" />
+              <ArrowRight className="ml-1 inline-block w-2" />
             </Link>
           </Button>
         </div>

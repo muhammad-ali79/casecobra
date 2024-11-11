@@ -14,7 +14,7 @@ export default function Phone({
 }: PhoneProps) {
   return (
     <div
-      className={cn("relative pointer-events-none z-50", className)}
+      className={cn("pointer-events-none relative z-50", className)}
       {...props}
     >
       <img
@@ -24,10 +24,10 @@ export default function Phone({
             : "/phone-template-white-edges.png"
         }
         alt="Phone cover image"
-        className=" pointer-events-none"
+        className="pointer-events-none"
       />
 
-      <div className="absolute -z-10 inset-0">
+      <div className="absolute inset-0 -z-10">
         <img
           src={imgSrc}
           alt="overlaying phone image"

@@ -2,13 +2,13 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-white flex flex-col gap-y-3 md:flex-row justify-between items-center md:items-start shadow-md md:mx-14 h-22 py-8">
+    <footer className="h-22 flex flex-col items-center justify-between gap-y-3 bg-white py-8 shadow-md md:mx-14 md:flex-row md:items-start">
       <div>
-        <p className="text-muted-foreground text-sm">
+        <p className="text-sm text-muted-foreground">
           © {new Date().getFullYear()} All rights reserved
         </p>
       </div>
-      <div className="text-muted-foreground text-sm flex gap-x-6">
+      <div className="flex gap-x-6 text-sm text-muted-foreground">
         <Link href={"#"}>Terms</Link>
         <Link href={"#"}>Privacy Policy</Link>
         <Link href={"#"}>Cookie Policy</Link>

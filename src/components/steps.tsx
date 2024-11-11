@@ -30,7 +30,7 @@ function Steps() {
   return (
     <div>
       <MaxwidthWraper>
-        <ul className="bg-white flex flex-col lg:flex-row ">
+        <ul className="flex flex-col bg-white lg:flex-row">
           {STEPS.map((step, i) => {
             const isCurrent = pathName.endsWith(step.url);
 
@@ -41,7 +41,7 @@ function Steps() {
             // the step(index) which is not included will be marked as isCompleted.
             // because its not about Step(object/index) is included or not in the array. its about for which step we are computing isCompleted
             const isCompleted = STEPS.slice(i + 1).some((step) =>
-              pathName.endsWith(step.url)
+              pathName.endsWith(step.url),
             );
 
             const imgUrl = `snake-${i + 1}.png`;
@@ -52,11 +52,11 @@ function Steps() {
                   <div>
                     {/*make h-1 and w-full to span div across y-axis on lg*/}
                     <div
-                      className={`h-full w-1 absolute left-0 lg:bottom-0 lg:w-full lg:h-1 ${
-                        isCompleted ? "bg-green-500" : ""
+                      className={`absolute left-0 h-full w-1 lg:bottom-0 lg:h-1 lg:w-full ${
+                        isCompleted ? "bg-primary" : ""
                       } ${isCurrent ? "bg-zinc-700" : "bg-zinc-400"}`}
                     ></div>
-                    <div className="px-8 py-4 flex items-center gap-x-4">
+                    <div className="flex items-center gap-x-4 px-8 py-4">
                       <img
                         src={`/${imgUrl}`}
                         alt="Snake Image"
@@ -65,7 +65,7 @@ function Steps() {
                       <div className="flex flex-col items-start gap-y-1">
                         <h5
                           className={`text-sm font-semibold ${
-                            isCompleted ? "text-green-500" : ""
+                            isCompleted ? "text-primary" : ""
                           }text-zinc-700`}
                         >
                           {step.title}
@@ -74,7 +74,7 @@ function Steps() {
                       </div>
                     </div>
                     {i !== 0 ? (
-                      <div className="absolute hidden lg:block inset-0 min-h-full w-3">
+                      <div className="absolute inset-0 hidden min-h-full w-3 lg:block">
                         <svg
                           className="h-full w-full text-gray-300"
                           viewBox="0 0 12 82"
