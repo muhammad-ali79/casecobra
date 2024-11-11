@@ -26,7 +26,7 @@ const Navbar = function () {
 
           <div className="h-8 w-px bg-zinc-200 hidden sm:block"></div>
           <Button className="bg-primary hidden md:block">
-            <Link href={""} className="text-xs text-white">
+            <Link href={"/configure/upload"} className="text-xs text-white">
               Create case
               <ArrowRight className="inline-block ml-1 w-2" />
             </Link>
