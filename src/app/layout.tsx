@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Recursive } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import { ThemeProvider } from "@/components/themeProvider";
-import Footer from "@/components/footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,8 +27,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Toaster />
           <Navbar />
-          <main>{children}</main>
+          <main className="min-h[cac(100vh-3.5rem-1px)] flex flex-col">
+            <div className="flex h-full flex-1 flex-col">{children}</div>
+          </main>
           <Footer />
         </ThemeProvider>
       </body>

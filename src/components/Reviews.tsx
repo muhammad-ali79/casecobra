@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { HTMLAttributes, useEffect, useRef, useState } from "react";
-import Phone from "./phone";
+import Phone from "./Phone";
 import { useInView } from "framer-motion";
 import MaxwidthWraper from "./MaxwidthWraper";
 

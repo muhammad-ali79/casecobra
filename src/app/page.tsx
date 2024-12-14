@@ -1,9 +1,10 @@
 import MaxwidthWraper from "@/components/MaxwidthWraper";
 import { ArrowRight, Check, Star } from "lucide-react";
-import { Icons } from "@/components/icons";
-import { Reviews } from "@/components/reviews";
-import Phone from "@/components/phone";
+import { icons } from "@/components/icons";
+import { Reviews } from "@/components/Reviews";
+import Phone from "@/components/Phone";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -103,18 +104,8 @@ export default function Home() {
                 alt="lined image covering corner of Mobile Case"
                 className="absolute -bottom-4 -left-6 z-[60] w-20"
               />
-              <div className="pointer-events-none relative z-50 w-64">
-                <img
-                  src="/phone-template-white-edges.png"
-                  alt="Mobile Case"
-                  className="pointer-events-none select-none"
-                />
-                <img
-                  src="/testimonials/1.jpg"
-                  alt="dog image in Case"
-                  className="absolute inset-0 -z-10 min-h-full min-w-full object-cover"
-                />
-              </div>
+
+              <Phone imgSrc="/testimonials/1.jpg" className="w-60" />
             </div>
           </div>
         </MaxwidthWraper>
@@ -132,7 +123,7 @@ export default function Home() {
                     {" "}
                     customers
                     {/* will be hidden on < 640px(sm)*/}
-                    <Icons.underline className="pointer-events-none absolute inset-x-0 -bottom-6 hidden text-green-500 sm:block" />
+                    <icons.underline className="pointer-events-none absolute inset-x-0 -bottom-6 hidden text-green-500 sm:block" />
                   </span>{" "}
                   say
                 </h2>
@@ -226,7 +217,7 @@ export default function Home() {
             Upload your photo and get{" "}
             <span className="bg-green-600 text-white">your own case</span> now
           </h2>
-          <div className="flex flex-col items-center gap-3 md:flex-row">
+          <div className="flex flex-col items-center justify-center gap-3 md:flex-row">
             <img
               src="/horse.jpg"
               alt="Horse"
@@ -260,7 +251,9 @@ export default function Home() {
             </li>
           </ul>
           <Button className="mx-auto flex items-center self-center text-white md:py-4">
-            Create your own case now
+            <Link href={"/configure/upload"} className="text-xs text-white">
+              Create your own case
+            </Link>
             <ArrowRight />
           </Button>
         </MaxwidthWraper>
